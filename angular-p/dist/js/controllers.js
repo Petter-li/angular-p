@@ -1,0 +1,1 @@
+routerApp.controller("SignUp",function(o){o.userData={},o.sendForm=function(){o.myForm.$invalid?console.log("请再检查输入内容是否有错"):console.log("提交成功")}}),routerApp.directive("compare",function(){return{restrict:"AE",require:"ngModel",scope:{orgText:"=compare"},link:function(o,r,e,n){n.$validators.compare=function(r){return r==o.orgText},o.$watch("orgText",function(){n.$validate()})}}});

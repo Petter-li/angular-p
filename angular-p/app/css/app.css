@@ -1,0 +1,194 @@
+div,p,h1,h2,h3,h4,span,ul,li,input,a {
+    margin:0 0;
+    padding:0 0;
+    list-style: none;
+}
+
+
+/*登陆页背景动画CSS*/
+html {
+    width:100%;
+    height:100%;
+}
+body{
+    overflow: hidden;
+    height:100%;
+    width:100%;
+    background-color: #f7fafc;
+    font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
+}
+#mainvi {
+    overflow: hidden;
+    height:100%;
+    width:100%;
+}
+#myCanvas{
+    border: 1px;
+    background-color: #f7fafc;
+    z-index: -1;
+    position: absolute;
+    top:0px;
+}
+.a {
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: #787878;
+    font-family: "Comic Sans MS", cursive;
+}
+.tou {
+    font-size: 14px;
+    text-align: center;
+    color: #787878;
+    font-family: "Comic Sans MS", cursive;
+}
+
+/*作者：匿名用户
+链接：https://www.zhihu.com/question/38812154/answer/120854993
+来源：知乎
+著作权归作者所有，转载请联系作者获得授权。*/
+
+.zhihu {
+    height:100%;
+    min-width:720px;
+    text-align: center;
+    vertical-align: middle;
+}
+.zhihu:before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -.25em;
+}
+.loginMain {
+    display: inline-block;
+    width:300px;
+    height:590px;
+    margin:auto;
+    vertical-align: middle;
+    color:#555;
+}
+.loginMain h1 {
+    font-size:48px;
+    font-weight: bold;
+    margin-bottom:20px;
+    color:#0F88EB;
+}
+.loginMain h4 {
+    font-size:18px;
+    font-weight: 400;
+    line-height:1;
+}
+.loginMain .choicebar {
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-size:18px;
+    position: relative;
+}
+.loginMain .choicebar a {
+    display: inline-block;
+    width:72px;
+    height:34px;
+    line-height: 34px;
+    text-align: center;
+    color:#555;
+    opacity: .7;
+    text-decoration: none;
+}
+.loginMain .choicebar a:hover {
+    opacity: 1;
+}
+.loginMain .choicebar a.active {
+    color:#0f88eb;
+}
+.loginMain .choiceline {
+    display: block;
+    width:60px;
+    height:2px;
+    background-color:#0F88EB;
+    position: absolute;
+    left:82px;
+}
+.loginMain .slbox {
+    widht:100%;
+}
+
+/*首页模板sign login*/
+/*.loginMain input.wrong {
+    border:1px solid #ac2925;
+}*/
+.loginMain .form-group {
+    position: relative;
+}
+.loginMain .wif {
+    height:18px;
+    font-size:12px;
+    color:#ac2925;
+}
+.loginMain .form-group {
+    margin-bottom: 0px;
+}
+.loginMain .btn {
+    margin-top: 10px;
+}
+.loginMain .input-result{
+    position: absolute;
+    top:11px;
+    left:280px;
+}
+.loginMain .success-icon{
+    color:#449D44;
+}
+.loginMain .error-icon{
+    color:#ac2925;
+}
+
+.choiceline {
+    transition: .3s ease all;
+}
+.choiceline.on-add {
+    left:82px;
+}
+.choiceline.on {
+     left:158px;
+}
+/*.choiceline.on-remove {
+    left:158px;
+}*/
+.choicebar a.active {
+    color:#0F88EB;
+}
+.loginMain .bkapp {
+    width:300px;
+    border:1px solid #96C2E9;
+    color:#96C2E9;
+    margin-top: 30px;
+}
+.loginMain .bkapp:hover {
+    background-color: #fff;
+}
+
+/*主页头部区域*/
+.main-top {
+    width:100%;
+    height:46px;
+    background-color:#0769CB;
+}
+.main-top .navbar-brand {
+    color:#fff;
+    font-size:25px;
+}
+.main-top .navbar-brand:hover {
+    color:#fff;
+}
+.main-top #searchfor {
+    width:330px;
+}
+.main-top .input-group-addon {
+    background-color:#0e7bef ;
+    border:1px solid #0e7bef;
+}
+.main-top .input-group-addon span {
+    color:#fff;
+}

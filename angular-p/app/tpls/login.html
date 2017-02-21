@@ -1,0 +1,31 @@
+<form name="LoginForm">
+    <div class="form-group">
+        <input type="text" name="telp" ng-model="userData.telp" ng-pattern="/(^1[0-9]{10}$)|(^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$)/" class="form-control" ng-class="{'has-success':LoginForm.name.$valid}" placeholder="手机号码或邮箱" required>
+        <div class="wif">
+            <p ng-show="LoginForm.telp.$dirty && LoginForm.telp.$invalid" >
+                <span ng-show="LoginForm.telp.$error.required">手机号或邮箱为必输项</span>
+                <span ng-show="LoginForm.telp.$error.pattern">
+                    <!--<span ng-show="LoginForm.telp.$error.email">您输入的邮箱格式不正确</span>
+                    <span ng-show="!LoginForm.telp.$error.email">您输入的手机不正确</span>-->
+                    请您检查输入的手机号码或邮箱
+                </span>
+            </p>
+        </div>
+        <span ng-if="LoginForm.telp.$dirty && LoginForm.telp.$valid" class="glyphicon glyphicon-ok success-icon input-result" aria-hidden="true"></span>
+        <span ng-if="LoginForm.telp.$dirty && LoginForm.telp.$invalid" class="glyphicon glyphicon-remove error-icon input-result" aria-hidden="true"></span>
+    </div>
+    <div class="form-group">
+        <input type="password" name="password" ng-model="userData.password" class="form-control" placeholder="密码(不少于6位)" ng-class="{'has-success':LoginForm.name.$valid}" required ng-minlength="6">
+        <div class="wif">
+            <p ng-show="LoginForm.password.$dirty && LoginForm.password.$invalid" >
+                <span ng-show="LoginForm.password.$error.required">密码为必输项</span>
+                <span ng-show="LoginForm.password.$error.minlength">密码不得少于6位</span>
+            </p>
+        </div>
+        <span ng-if="LoginForm.password.$dirty && LoginForm.password.$valid" class="glyphicon glyphicon-ok success-icon input-result" aria-hidden="true"></span>
+        <span ng-if="LoginForm.password.$dirty && LoginForm.password.$invalid" class="glyphicon glyphicon-remove error-icon input-result" aria-hidden="true"></span>
+    </div>
+
+    <a ui-sref="BookMain" class="btn btn-primary form-control" ng-disabled="LoginForm.$invalid">登陆</a>
+</form>
+

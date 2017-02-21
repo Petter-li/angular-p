@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="82736304-9c50-4b84-8bd8-d20f6ebe1d18" name="branch虚拟机" url="http://200.5.1.135">
+        <fileTransfer host="200.5.1.135" port="22" rootFolder="/home/branch" accessType="SFTP" username="branch">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="c6310a8c-f19a-41f0-af3a-73309f103396" name="branch鄂尔多斯" url="http://200.1.1.50">
+        <fileTransfer host="200.1.1.50" port="22" rootFolder="/home/branch" accessType="SFTP" username="branch">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

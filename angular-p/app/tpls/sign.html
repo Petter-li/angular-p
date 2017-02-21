@@ -1,0 +1,47 @@
+<form name="SignForm">
+    <div class="form-group">
+        <input type="text" name="name" ng-model="userData.name" class="form-control" ng-class="{'has-success':SignForm.name.$valid}" placeholder="姓名" required>
+        <div class="wif">
+            <p ng-show="SignForm.name.$dirty && SignForm.name.$invalid" >
+                <span ng-show="SignForm.name.$error.required">姓名为必输项</span>
+            </p>
+        </div>
+        <span ng-if="SignForm.name.$dirty && SignForm.name.$valid" class="glyphicon glyphicon-ok success-icon input-result" aria-hidden="true"></span>
+        <span ng-if="SignForm.name.$dirty && SignForm.name.$invalid" class="glyphicon glyphicon-remove error-icon input-result" aria-hidden="true"></span>
+    </div>
+    <div class="form-group">
+        <input type="text" name="telp" ng-model="userData.telp" ng-pattern="/^1[34578]\d{9}$/" class="form-control" ng-class="{'has-success':SignForm.name.$valid}" placeholder="手机号" required>
+        <div class="wif">
+            <p ng-show="SignForm.telp.$dirty && SignForm.telp.$invalid" >
+                <span ng-show="SignForm.telp.$error.required">手机号为必输项</span>
+                <span ng-show="SignForm.telp.$error.pattern">手机号需为13位数字</span>
+            </p>
+        </div>
+        <span ng-if="SignForm.telp.$dirty && SignForm.telp.$valid" class="glyphicon glyphicon-ok success-icon input-result" aria-hidden="true"></span>
+        <span ng-if="SignForm.telp.$dirty && SignForm.telp.$invalid" class="glyphicon glyphicon-remove error-icon input-result" aria-hidden="true"></span>
+    </div>
+    <div class="form-group">
+        <input type="password" name="password" ng-model="userData.password" class="form-control" placeholder="密码(不少于6位)" ng-class="{'has-success':SignForm.name.$valid}" required ng-minlength="6">
+        <div class="wif">
+            <p ng-show="SignForm.password.$dirty && SignForm.password.$invalid" >
+                <span ng-show="SignForm.password.$error.required">密码为必输项</span>
+                <span ng-show="SignForm.password.$error.minlength">密码不得少于6位</span>
+            </p>
+        </div>
+        <span ng-if="SignForm.password.$dirty && SignForm.password.$valid" class="glyphicon glyphicon-ok success-icon input-result" aria-hidden="true"></span>
+        <span ng-if="SignForm.password.$dirty && SignForm.password.$invalid" class="glyphicon glyphicon-remove error-icon input-result" aria-hidden="true"></span>
+    </div>
+    <div class="form-group">
+        <input type="password" name="password2" ng-model="userData.password2" class="form-control" ng-class="{'has-success':SignForm.name.$valid}" placeholder="确认密码" compare="userData.password">
+        <div class="wif">
+            <p ng-show="SignForm.password2.$dirty && SignForm.password2.$invalid">
+                <span ng-show="SignForm.password2.$error.compare">两次输入密码不一致</span>
+            </p>
+        </div>
+        <span ng-if="SignForm.password2.$dirty && SignForm.password2.$valid" class="glyphicon glyphicon-ok success-icon input-result" aria-hidden="true"></span>
+        <span ng-if="SignForm.password2.$dirty && SignForm.password2.$invalid" class="glyphicon glyphicon-remove error-icon input-result" aria-hidden="true"></span>
+    </div>
+    <a type="submit" class="btn btn-primary form-control" ng-disabled="SignForm.$invalid">注册BKST</a>
+</form>
+<br>
+<p>点击注册按钮，即代表你同意BookStore协议</p>

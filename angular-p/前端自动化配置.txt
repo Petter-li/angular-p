@@ -1,0 +1,17 @@
+﻿前端自动化配置
+SHIFT+右键 快速打开cmd   Gulp基于流的自动化构建工具 SHIFT+F5各大浏览器强制刷新
+1，git安装并配置到环境变量，查看版本检测是否安装成功（git --version）
+2，安装node.js并检查是否安装成功（node -v,npm -v）【npm:node package manage】
+3，npm init 生成package.json
+4，安装bower并配置环境变量：npm install bower --save -g，查看版本检测是否安装成功（bower -v）
+5，bower init生成bower.json
+5，使用bower安装jquery(bower install jquery --save)
+6，安装http-server用于快速启动本地web项目：npm install http-server --save -g
+7，配置启动端口号：http-server -p 8080(端口号可修改)
+8，安装angularjs: bower install angularjs --save -g（依赖于jquery）
+/******************
+ng-include="'文件路径'" ng-include的值可以在controller中定义全局变量，使用{{变量名}}来赋值。
+例如
+$scope.myurl = "src/tem/hello.html"
+ng-include = "{{myurl}}"
+***************/
